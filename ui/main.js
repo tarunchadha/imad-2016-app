@@ -1,5 +1,6 @@
 // Counter code
 var button = document.getElementById('counter');
+
 button.onclick = function () {
     
   // Create a request object
@@ -13,10 +14,15 @@ button.onclick = function () {
         // Take some action
         if(request.status === 200){
             
+            var counter = request.responseText;
+            var span = document.getElementById('count');
+            span.innerHTML = counter.toString();
+            
+            
            
         }
     } 
-      // Not done yet
+     
   };
   
   // Make the request 
@@ -27,11 +33,13 @@ button.onclick = function () {
 
 // Submit name
 
-
+var nameInput = document.getElementById('name');
+var name = nameInput.value;
 var submit = document.getElementById('submit_btn');
-submit.onclick = function () {
+submit.onclick = function (){
     
-      // Create a request object
+    
+    // Create a request object
   
   var request = new XMLHttpRequest();
   
@@ -41,31 +49,32 @@ submit.onclick = function () {
         
         // Take some action
         if(request.status === 200){
-             var names = request.responseText;
-             names = JSON.parse(names);
-  var list = ''; 
-  for (var i=0; i< names.length; i++) {
-      list +='<li>' + names[i] + '</li>';
-      
-  }
-    var ul = document.getElementById('namelist');
-    ul.innerHTML = list;
-
             
+            var names = request.responseText;
+            names = JSON.parse(names);
+    
+    var list ='';
+    for (var i = 0; i< names.length; i++) {
+        
+        list+= '<li>' + names[i] + '</li>';
+        
+    }
+    
+    var ul = document.getElementById('nameList');
+    ul.innerHTML = list;
+            
+           
+            
+           
         }
     } 
-      // Not done yet
+     
   };
   
   // Make the request 
   
-  var nameInput = document.getElementById('name');
-var name = nameInput.value;
-  
-  request.open('GET', 'http://tarunchadha.imad.hasura-app.iosubmit-name?name='+ name, true);
+  request.open('GET', 'http://tarunchadha.imad.hasura-app.io/submit-name?name='+ name, true);
   request.send(null);
-  // Make a request to the server and send the name
-  // Capture a list of names and render it as a list 
-  
- 
+    
 };
+
