@@ -9,7 +9,7 @@ var articles = {
 'article-one': {
     title: 'Article One | Tarun Chadha',
     heading: 'Article One',
-    date: 'Sep 30, 2016',
+    date: 'Sep 5, 2016',
     content:`   
     
     <p>
@@ -28,7 +28,7 @@ var articles = {
 'article-two': {
     title: 'Article Two | Tarun Chadha',
     heading: 'Article Two',
-    date: 'Sep 30, 2016',
+    date: 'Sep 15, 2016',
     content:`
     
     <p>
@@ -40,7 +40,7 @@ var articles = {
     
     title: 'Article Three| Tarun Chadha',
     heading: 'Article Three',
-    date: 'Sep 30, 2016',
+    date: 'Sep 20, 2016',
     content:`
     
     <p>
