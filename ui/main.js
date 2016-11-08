@@ -43,14 +43,14 @@ button.onclick = function () {
         // Not done yet
     };
       // Make the request
-      
+      var nameInput = document.getElementById('name');
+var name = nameInput.value;
       request.open('GET', 'http://tarunchadha.imad.hasura-app.io/counter', true);
       request.send(null);
 };
 
 // Submit name
-var nameInput = document.getElementById('name');
-var name = nameInput.value;
+
 var submit = document.getElementById('submit_btn');
 submit.onclick = function () {
     // Make a request to the server and send the name
