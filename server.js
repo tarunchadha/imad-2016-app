@@ -38,9 +38,9 @@ var articles = {
 },
 'article-three': {
     
-    title: 'Article Three| Tarun Chadha',
+    title: 'Article Three | Tarun Chadha',
     heading: 'Article Three',
-    date: 'Sep 20, 2016',
+    date: 'Sep 15, 2016',
     content:`
     
     <p>
@@ -56,13 +56,15 @@ function createTemplate (data) {
     var content = data.content;
     
     
-var htmlTemplate = `<html>
+var htmlTemplate = `
+<html>
     <head>
         
         <title>
             
            ${title}
         </title>
+        
         <meta name="viewport" content="width=device-width, initial scale=1" />
         <link href="/ui/style.css" rel="stylesheet" />
        </head>
@@ -80,8 +82,6 @@ var htmlTemplate = `<html>
         </div>
         <div>
         ${content}
-        </div>
-        
         </div>
     </body>
     
@@ -132,10 +132,14 @@ app.get('/ui/main.js', function (req, res) {
 app.get('/ui/madi.png', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'madi.png'));
 });
-
-
+var names= [];
+app.get('/submit-name/:name', function (req,res){ 
+  // Get the name from the request 
+  var name = req.params.name; 
+  names.push(name);
+  res.send(JSON.stingify(names)); //TODO
     
-
+});
 var port = 8080; // Use 8080 for local development because you might already have apache running on 80
 app.listen(8080, function () {
   console.log(`IMAD course app listening on port ${port}!`);
