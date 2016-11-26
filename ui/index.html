@@ -1,15 +1,32 @@
 <!doctype html>
 <html>
     <head>
-        <link href = "/ui/style.css" rel="stylesheet" />
+        <link href="/ui/style.css" rel="stylesheet" />
     </head>
     <body>
+        <div class="container">
         <div class="center">
-            <img src="/ui/madi.png" class="img-medium"/>
+            <img id='madi' src="https://pbs.twimg.com/profile_images/790030731162640385/qk2QUQg1.jpg" class="img-medium"/>
         </div>
-        <br>
-        <div class= "center text-big bold">
-            Hi! I am your webapp.
+      
+        <h3> Personal </h3>
+        <div>
+            Hi, My name is Tarun Chadha
+        </div>
+          <hr/>
+          <h3> Professional </h3>
+        <div>
+            I study at centre for converging technologies
+        </div>
+        <hr/>
+          <div class= "footer">
+              This button <button id="counter">Click me!</button> has been clicked <span id="count">0</span> times.
+              <hr/>
+              <input type="text" id ="name" placeholder="name"></input>
+              <input type="submit" value="Submit" id ="submit_btn" ></input>
+              <ul id="namelist">
+              </ul>
+             </div>
         </div>
         <script type="text/javascript" src="/ui/main.js">
         </script>
