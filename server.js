@@ -23,7 +23,7 @@ var articles = {
                 This is the content for my first article.This is the content for my first article.This is the content for my first article.This is the content for my first article.This is the content for my first article.This is the content for my first article. 
             </p>`
    },
-    'aticle-two'   : {
+    'aticle-two': {
         title: 'Article Two | Tarun Chadha',
       heading: 'Article Two',
       date: 'Sep 10, 2016',
