@@ -25,9 +25,9 @@ var articles = {
    },
     'aticle-two'   : {
         title: 'Article Two | Tarun Chadha',
-      heading: 'Article Two',
-      date: 'Sep 10, 2016',
-      content:` <p>
+        heading: 'Article Two',
+        date: 'Sep 10, 2016',
+        content:` <p>
                 This is the content for my second article.
             </p>`
     },
